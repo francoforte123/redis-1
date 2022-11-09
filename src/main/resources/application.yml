@@ -1,0 +1,14 @@
+redis:
+  database: Emanuele-free-db
+  host: redis-16561.c239.us-east-1-2.ec2.cloud.redislabs.com:16561
+  password: GvHFiV0PzweIQG6q7Rgimwnw2pp9UUAT
+  port: 16561
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    password: dante123
+    username: root
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  main:
+    allow-bean-definition-overriding: true

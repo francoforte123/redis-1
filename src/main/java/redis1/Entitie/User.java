@@ -1,4 +1,4 @@
-package redis1.Entitie.JPA;
+package redis1.Entitie;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class UserJpa {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,24 +16,11 @@ public class UserJpa {
     private String email;
     private String passwordEncrypted;
 
-    public UserJpa(long id, String name, String surname, String email, String passwordEncrypted) {
-        this.id = id;
+    public User(String name, String surname, String email, String passwordEncrypted){
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.passwordEncrypted = passwordEncrypted;
-    }
-
-    public UserJpa() {
-
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getName() {

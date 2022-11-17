@@ -6,6 +6,5 @@ import org.springframework.stereotype.Repository;
 import redis1.Entitie.JPA.UserJpa;
 
 @Repository
-@EnableJpaRepositories
-public interface UserJpaRepository extends JpaRepository<UserJpa, String> {
+public interface UserJpaRepository extends JpaRepository<UserJpa, Long> {
 }

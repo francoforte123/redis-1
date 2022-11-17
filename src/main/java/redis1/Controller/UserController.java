@@ -16,21 +16,27 @@ public class UserController {
 
     @GetMapping("/")
     public List<UserJpa> get(){
-        return userService.get();
+        return userService.readAll();
     }
+
+    @GetMapping("/{id}")
+    public UserJpa readOne(@PathVariable Long id){
+        return userService.readOne(id);
+    }
+
 
     @PostMapping("/")
     public void post(@RequestBody UserJpa user){
-        userService.post(user);
+        userService.create(user);
     }
 
     @PutMapping("/{id}")
-    public void update(String id, UserJpa user){
+    public void update(long id, UserJpa user){
         userService.update(id, user);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(String id){
+    public void delete(long id){
         userService.delete(id);
     }
 }

@@ -6,6 +6,5 @@ import org.springframework.stereotype.Repository;
 import redis1.Entitie.Redis.UserRedis;
 
 @Repository
-@EnableJpaRepositories
-public interface UserRedisRepository extends JpaRepository<UserRedis, String> {
+public interface UserRedisRepository extends JpaRepository<UserRedis, Long> {
 }
